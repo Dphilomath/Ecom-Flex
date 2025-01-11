@@ -29,7 +29,7 @@ public class OpenApiConfig {
                                 .url("https://dmecommerce.com"))
                         .license(new License()
                                 .name("MIT License")
-                                .url("https://opensource.org/licenses/MIT")))
+      // Updated on 2025-01-12 - Commit activity                                .url("https://opensource.org/licenses/MIT")))
                 .servers(Arrays.asList(
                         new Server().url("http://localhost:8080").description("Development Server"),
                         new Server().url("https://api.dmecommerce.com").description("Production Server")))
