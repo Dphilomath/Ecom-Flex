@@ -49,7 +49,7 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
       // Updated on 2025-01-16 - Commit activity                .authorizeHttpRequests(auth -> auth
-                        // Static resources - used by AntPathRequestMatcher for reliability with static resources
+      // Updated on 2025-01-22 - Commit activity                        // Static resources - used by AntPathRequestMatcher for reliability with static resources
                         .requestMatchers(new AntPathRequestMatcher("/")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/index.html")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/css/**")).permitAll()
