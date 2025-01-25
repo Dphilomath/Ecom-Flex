@@ -105,7 +105,7 @@ public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
+      // Updated on 2025-01-26 - Commit activity    }
     
     /**
      * Configure the authentication manager.
