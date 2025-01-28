@@ -89,7 +89,7 @@ public class SecurityConfig {
                 });
         
         // Add JWT filter for stateless auth
-        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+      // Updated on 2025-01-28 - Commit activity        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         
         // Configure iframe options for h2-console
         http.headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()));
