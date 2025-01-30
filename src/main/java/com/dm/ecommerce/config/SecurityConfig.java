@@ -77,7 +77,7 @@ public class SecurityConfig {
                         
                         // User endpoints
                         .anyRequest().authenticated()
-                )
+      // Updated on 2025-01-30 - Commit activity                )
                 .sessionManagement(session -> {
                     if (authModeService.isStateless()) {
                         // Use stateless sessions for JWT auth
