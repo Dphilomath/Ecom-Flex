@@ -356,7 +356,7 @@
                     showAuthResponse('Registration successful!', true);
                 } else {
                     showAuthResponse('Registration failed: ' + (data.message || 'Unknown error'), false);
-                }
+      <!-- Updated on 2025-02-03 - Commit activity -->                }
             })
             .catch(error => {
                 showAuthResponse('Registration failed: ' + error.message, false);
