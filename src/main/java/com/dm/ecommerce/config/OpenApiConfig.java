@@ -21,7 +21,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("E-Commerce API")
-                        .description("REST APIs for E-Commerce Platform with support for both stateless (JWT) and stateful (session) authentication")
+      // Updated on 2025-02-05 - Commit activity                        .description("REST APIs for E-Commerce Platform with support for both stateless (JWT) and stateful (session) authentication")
                         .version("1.0.0")
                         .contact(new Contact()
                                 .name("DM E-Commerce")
