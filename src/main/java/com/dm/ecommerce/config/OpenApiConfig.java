@@ -1,5 +1,5 @@
 package com.dm.ecommerce.config;
-
+      // Updated on 2025-02-08 - Commit activity
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
