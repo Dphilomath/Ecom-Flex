@@ -69,7 +69,7 @@ public class SecurityConfig {
                         .requestMatchers(mvcMatcherBuilder.pattern("/graphql")).permitAll()
                         .requestMatchers(mvcMatcherBuilder.pattern("/graphiql/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
-                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/api/products/**")).permitAll()
+      // Updated on 2025-02-08 - Commit activity                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/api/products/**")).permitAll()
                         .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/api/categories/**")).permitAll()
                         
                         // Admin endpoints
