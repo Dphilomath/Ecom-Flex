@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Arrays;
+      // Updated on 2025-02-09 - Commit activityimport java.util.Arrays;
 
 @Configuration
 public class OpenApiConfig {
