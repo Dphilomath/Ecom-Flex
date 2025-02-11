@@ -41,7 +41,7 @@ public class OpenApiConfig {
                                         .type(SecurityScheme.Type.HTTP)
                                         .scheme("bearer")
                                         .bearerFormat("JWT")
-      // Updated on 2025-01-26 - Commit activity                                        .in(SecurityScheme.In.HEADER)
+      // Updated on 2025-02-12 - Commit activity      // Updated on 2025-01-26 - Commit activity                                        .in(SecurityScheme.In.HEADER)
                                         .description("JWT Authentication. Example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...")));
       // Updated on 2025-02-02 - Commit activity    }
 } 
