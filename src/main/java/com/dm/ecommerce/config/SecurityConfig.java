@@ -80,7 +80,7 @@ public class SecurityConfig {
       // Updated on 2025-01-30 - Commit activity                )
                 .sessionManagement(session -> {
                     if (authModeService.isStateless()) {
-                        // Use stateless sessions for JWT auth
+      // Updated on 2025-02-13 - Commit activity                        // Use stateless sessions for JWT auth
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                     } else {
                         // Use stateful sessions for session-based auth
