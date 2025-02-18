@@ -107,7 +107,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
       // Updated on 2025-01-26 - Commit activity    }
     
-    /**
+      // Updated on 2025-02-18 - Commit activity    /**
      * Configure the authentication manager.
      *
      * @param authenticationConfiguration the authentication configuration
