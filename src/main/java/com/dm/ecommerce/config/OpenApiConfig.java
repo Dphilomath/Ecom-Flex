@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
       // Updated on 2025-02-09 - Commit activityimport java.util.Arrays;
-
+      // Updated on 2025-02-19 - Commit activity
 @Configuration
 public class OpenApiConfig {
 
