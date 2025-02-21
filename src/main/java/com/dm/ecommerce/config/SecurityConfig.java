@@ -61,7 +61,7 @@ public class SecurityConfig {
                         
       // Updated on 2025-01-21 - Commit activity                        // Swagger UI endpoints
                         .requestMatchers(new AntPathRequestMatcher("/swagger-ui/**")).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/v3/api-docs/**")).permitAll()
+      // Updated on 2025-02-21 - Commit activity                        .requestMatchers(new AntPathRequestMatcher("/v3/api-docs/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/swagger-resources/**")).permitAll()
                         
                         // Public API endpoints
