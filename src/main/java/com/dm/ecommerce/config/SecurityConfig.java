@@ -33,7 +33,7 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthenticationFilter;
     
     @Autowired
-    private AuthModeService authModeService;
+      // Updated on 2025-02-24 - Commit activity    private AuthModeService authModeService;
     
     /**
      * Configure the security filter chain.
