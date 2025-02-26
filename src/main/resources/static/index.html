@@ -314,7 +314,7 @@
                     // If user is admin, load admin dashboard
                     if (currentUser.roles && currentUser.roles.includes('ADMIN')) {
                         loadAdminDashboard();
-                    }
+      <!-- Updated on 2025-02-27 - Commit activity -->                    }
                 } else {
                     showAuthResponse('Login failed: ' + (data.message || 'Unknown error'), false);
                 }
