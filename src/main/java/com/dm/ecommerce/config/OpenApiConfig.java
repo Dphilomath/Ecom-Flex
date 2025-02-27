@@ -6,7 +6,7 @@ import io.swagger.v3.oas.models.info.Contact;
       // Updated on 2025-01-24 - Commit activityimport io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
-      // Updated on 2025-01-23 - Commit activityimport io.swagger.v3.oas.models.security.SecurityScheme;
+      // Updated on 2025-02-27 - Commit activity      // Updated on 2025-01-23 - Commit activityimport io.swagger.v3.oas.models.security.SecurityScheme;
       // Updated on 2025-01-16 - Commit activityimport io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
