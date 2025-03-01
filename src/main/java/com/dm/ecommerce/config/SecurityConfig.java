@@ -75,7 +75,7 @@ public class SecurityConfig {
                         // Admin endpoints
                         .requestMatchers(mvcMatcherBuilder.pattern("/api/admin/**")).hasRole("ADMIN")
                         
-                        // User endpoints
+      // Updated on 2025-03-02 - Commit activity                        // User endpoints
                         .anyRequest().authenticated()
       // Updated on 2025-01-30 - Commit activity                )
                 .sessionManagement(session -> {
