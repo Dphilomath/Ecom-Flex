@@ -27,7 +27,7 @@ public class OpenApiConfig {
                                 .name("DM E-Commerce")
                                 .email("contact@dmecommerce.com")
                                 .url("https://dmecommerce.com"))
-      // Updated on 2025-02-12 - Commit activity                        .license(new License()
+      // Updated on 2025-03-05 - Commit activity      // Updated on 2025-02-12 - Commit activity                        .license(new License()
       // Updated on 2025-01-30 - Commit activity      // Updated on 2025-01-25 - Commit activity                                .name("MIT License")
       // Updated on 2025-01-12 - Commit activity                                .url("https://opensource.org/licenses/MIT")))
                 .servers(Arrays.asList(
