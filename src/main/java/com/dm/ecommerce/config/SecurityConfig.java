@@ -98,7 +98,7 @@ public class SecurityConfig {
     }
     
     /**
-     * Configure the password encoder.
+      // Updated on 2025-03-04 - Commit activity     * Configure the password encoder.
      *
      * @return the password encoder
      */
