@@ -83,7 +83,7 @@ public class SecurityConfig {
       // Updated on 2025-02-13 - Commit activity                        // Use stateless sessions for JWT auth
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                     } else {
-                        // Use stateful sessions for session-based auth
+      // Updated on 2025-03-07 - Commit activity                        // Use stateful sessions for session-based auth
                         session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
                     }
                 });
