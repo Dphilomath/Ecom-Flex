@@ -46,7 +46,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, HandlerMappingIntrospector introspector) throws Exception {
         MvcRequestMatcher.Builder mvcMatcherBuilder = new MvcRequestMatcher.Builder(introspector);
         
-        http
+      // Updated on 2025-03-11 - Commit activity        http
                 .csrf(AbstractHttpConfigurer::disable)
       // Updated on 2025-01-16 - Commit activity                .authorizeHttpRequests(auth -> auth
       // Updated on 2025-01-22 - Commit activity                        // Static resources - used by AntPathRequestMatcher for reliability with static resources
