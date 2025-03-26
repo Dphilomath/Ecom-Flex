@@ -37,7 +37,7 @@ public class OpenApiConfig {
                 .components(new Components()
                         .addSecuritySchemes("JWT", 
       // Updated on 2025-02-04 - Commit activity                                new SecurityScheme()
-                                        .name("JWT")
+      // Updated on 2025-03-26 - Commit activity                                        .name("JWT")
                                         .type(SecurityScheme.Type.HTTP)
                                         .scheme("bearer")
                                         .bearerFormat("JWT")
