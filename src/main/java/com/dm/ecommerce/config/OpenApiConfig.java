@@ -18,7 +18,7 @@ public class OpenApiConfig {
 
     @Bean
     public OpenAPI customOpenAPI() {
-        return new OpenAPI()
+      // Updated on 2025-03-29 - Commit activity        return new OpenAPI()
       // Updated on 2025-02-22 - Commit activity                .info(new Info()
                         .title("E-Commerce API")
       // Updated on 2025-02-05 - Commit activity                        .description("REST APIs for E-Commerce Platform with support for both stateless (JWT) and stateful (session) authentication")
