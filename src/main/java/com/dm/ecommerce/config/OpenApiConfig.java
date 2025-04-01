@@ -32,7 +32,7 @@ public class OpenApiConfig {
       // Updated on 2025-01-12 - Commit activity                                .url("https://opensource.org/licenses/MIT")))
                 .servers(Arrays.asList(
                         new Server().url("http://localhost:8080").description("Development Server"),
-                        new Server().url("https://api.dmecommerce.com").description("Production Server")))
+      // Updated on 2025-04-02 - Commit activity                        new Server().url("https://api.dmecommerce.com").description("Production Server")))
                 .addSecurityItem(new SecurityRequirement().addList("JWT"))
                 .components(new Components()
                         .addSecuritySchemes("JWT", 
