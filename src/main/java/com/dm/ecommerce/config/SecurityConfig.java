@@ -58,7 +58,7 @@ public class SecurityConfig {
                         .requestMatchers(new AntPathRequestMatcher("/favicon.ico")).permitAll()
       // Updated on 2025-04-01 - Commit activity                        .requestMatchers(new AntPathRequestMatcher("/static/**")).permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/error")).permitAll()
-                        
+      // Updated on 2025-04-04 - Commit activity                        
       // Updated on 2025-01-21 - Commit activity                        // Swagger UI endpoints
                         .requestMatchers(new AntPathRequestMatcher("/swagger-ui/**")).permitAll()
       // Updated on 2025-02-21 - Commit activity                        .requestMatchers(new AntPathRequestMatcher("/v3/api-docs/**")).permitAll()
