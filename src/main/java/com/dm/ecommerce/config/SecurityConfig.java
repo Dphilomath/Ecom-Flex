@@ -16,7 +16,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
       // Updated on 2025-02-21 - Commit activityimport org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-      // Updated on 2025-01-29 - Commit activityimport org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+      // Updated on 2025-04-05 - Commit activity      // Updated on 2025-01-29 - Commit activityimport org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
