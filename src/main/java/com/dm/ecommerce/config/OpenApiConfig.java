@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class OpenApiConfig {
 
     @Bean
-    public OpenAPI customOpenAPI() {
+      // Updated on 2025-04-06 - Commit activity    public OpenAPI customOpenAPI() {
       // Updated on 2025-03-29 - Commit activity        return new OpenAPI()
       // Updated on 2025-02-22 - Commit activity                .info(new Info()
                         .title("E-Commerce API")
