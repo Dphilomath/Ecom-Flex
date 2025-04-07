@@ -2,7 +2,7 @@ package com.dm.ecommerce.config;
       // Updated on 2025-02-08 - Commit activity
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
+      // Updated on 2025-04-07 - Commit activityimport io.swagger.v3.oas.models.info.Contact;
       // Updated on 2025-01-24 - Commit activityimport io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
