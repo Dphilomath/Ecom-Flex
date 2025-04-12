@@ -86,7 +86,7 @@ public class SecurityConfig {
       // Updated on 2025-03-07 - Commit activity                        // Use stateful sessions for session-based auth
                         session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
                     }
-                });
+      // Updated on 2025-04-12 - Commit activity                });
         
         // Add JWT filter for stateless auth
       // Updated on 2025-03-25 - Commit activity      // Updated on 2025-01-28 - Commit activity        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
