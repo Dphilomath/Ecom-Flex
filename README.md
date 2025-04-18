@@ -53,23 +53,33 @@ A modern e-commerce backend built with Spring Boot featuring both REST and Graph
 ## Project Structure
 
 ```
-src/main/java/com/dm/ecommerce/
-├── config/               # Configuration classes
-│   ├── AuthMode.java     # Authentication mode enum (JWT/Session)
-│   ├── DataInitializer.java # Sample data initialization
-│   ├── OpenApiConfig.java # Swagger/OpenAPI configuration
-│   ├── SecurityConfig.java # Security configuration
-│   └── WebConfig.java    # Web-related configurations
-├── controller/           # REST controllers
-├── graphql/              # GraphQL resolvers
-├── model/                # Entity classes
-├── payload/              # Request/Response DTOs
-├── repository/           # JPA repositories
-├── security/             # Security-related classes
-│   └── jwt/              # JWT authentication components
-├── service/              # Business logic services
-│   └── impl/             # Service implementations
-└── EcommerceApplication.java # Main application class
+src/
+├── main/
+│   ├── java/com/dm/ecommerce/
+│   │   ├── config/               # Configuration classes
+│   │   │   ├── AuthMode.java     # Authentication mode enum (JWT/Session)
+│   │   │   ├── DataInitializer.java # Sample data initialization
+│   │   │   ├── OpenApiConfig.java # Swagger/OpenAPI configuration
+│   │   │   ├── SecurityConfig.java # Security configuration
+│   │   │   └── WebConfig.java    # Web-related configurations
+│   │   ├── controller/           # REST controllers
+│   │   ├── graphql/              # GraphQL resolvers
+│   │   ├── model/                # Entity classes
+│   │   ├── payload/              # Request/Response DTOs
+│   │   ├── repository/           # JPA repositories
+│   │   ├── security/             # Security-related classes
+│   │   │   └── jwt/              # JWT authentication components
+│   │   ├── service/              # Business logic services
+│   │   │   └── impl/             # Service implementations
+│   │   └── EcommerceApplication.java # Main application class
+│   │
+│   └── resources/
+│       ├── application.yml       # Main application properties
+│       ├── application-local.yaml # Local development properties
+│       ├── application-prod.yaml # Production properties
+│       ├── application-docker.yml # Docker-specific properties
+│       ├── static/               # Static web resources
+│       └── graphql/              # GraphQL schema definitions
 ```
 
 ## API Documentation
@@ -92,36 +102,40 @@ Default users:
 
 ### Authentication Modes
 
-You can configure the authentication mode in `application.properties`:
+You can configure the authentication mode in `application.yml`:
 
-```properties
-app.auth.mode=JWT  # or SESSION
+```yaml
+jwt:
+  secret: yourSecretKey
+  expiration: 86400000  # 24 hours
 ```
 
 ## Configuration Options
 
-Key configuration options in `application.properties`:
+Key configuration options in `application.yml`:
 
-```properties
-# Server configuration
-server.port=8080
+```yaml
+spring:
+  # Database Configuration
+  datasource:
+    url: jdbc:h2:mem:ecommercedb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  
+  # GraphQL Configuration
+  graphql:
+    graphiql:
+      enabled: true
+    
+# JWT Configuration
+jwt:
+  secret: yourSecretKeyHere
+  expiration: 86400000  # 24 hours
 
-# Database configuration
-spring.datasource.url=jdbc:h2:mem:ecommercedb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
-# JPA configuration
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-# JWT configuration
-app.jwt.secret=yourSecretKey
-app.jwt.expiration=86400000  # 24 hours
-
-# Authentication mode (JWT or SESSION)
-app.auth.mode=JWT
+# Server Configuration
+server:
+  port: 8080
 ```
 
 ### Environment Variables
@@ -144,6 +158,7 @@ The application includes profile-specific configurations:
 
 - `application-local.yaml`: Used for local development (Swagger UI and GraphiQL always enabled)
 - `application-prod.yaml`: Used for production deployment (Swagger UI and GraphiQL controlled via environment variables)
+- `application-docker.yml`: Used for Docker deployments
 
 To activate a profile, set the `SPRING_PROFILES_ACTIVE` environment variable:
 
@@ -162,10 +177,12 @@ export SPRING_PROFILES_ACTIVE=prod
 For local development, you can use the H2 in-memory database:
 
 ```
-mvn spring-boot:run
+mvn spring-boot:run -Dspring.profiles.active=local
 ```
 
 ### Docker Deployment
+
+The application exposes port 8080 in the Dockerfile.
 
 Build and run the Docker container:
 
@@ -173,6 +190,14 @@ Build and run the Docker container:
 docker build -t ecommerce-backend .
 docker run -p 8080:8080 ecommerce-backend
 ```
+
+You can map to a different host port if needed:
+
+```
+docker run -p 9000:8080 ecommerce-backend
+```
+
+This will make the application available at http://localhost:9000 while it still runs on port 8080 inside the container.
 
 ### Docker Compose
 
