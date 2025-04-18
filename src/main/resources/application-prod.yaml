@@ -4,14 +4,14 @@
 spring:
   # Production Database Configuration (using environment variables)
   datasource:
-    url: ${JDBC_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    url: ${JDBC_DATABASE_URL:jdbc:h2:mem:ecommercedb}
+    username: ${JDBC_DATABASE_USERNAME:sa}
+    password: ${JDBC_DATABASE_PASSWORD:password}
     hikari:
       maximum-pool-size: 5
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     show-sql: false
   
   # GraphQL Configuration controlled via environment variable
