@@ -25,7 +25,7 @@ server:
     context-path: /
   # SSL Configuration
   ssl:
-    enabled: true
+    enabled: false # automatically handled by render.com
 
 app:
   base-url: https://ecom-flex.onrender.com
@@ -48,7 +48,7 @@ logging:
 
 # Security settings for production
 security:
-  require-ssl: true
+  require-ssl: false # SSL is handled by render.com
   headers:
     content-security-policy: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
     x-content-type-options: nosniff
