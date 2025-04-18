@@ -1,0 +1,59 @@
+spring:
+  # Database Configuration
+  datasource:
+    url: jdbc:h2:mem:ecommercedb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  
+  # GraphQL Configuration
+  graphql:
+    graphiql:
+      enabled: true
+    path: /graphql
+    
+  # MVC Configuration
+  mvc:
+    static-path-pattern: /**
+  web:
+    resources:
+      static-locations: classpath:/static/
+      cache:
+        period: 3600
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static/
+    suffix: .html
+    
+  # Security Configuration
+  security:
+    debug: true
+
+# JWT Configuration
+jwt:
+  secret: yourSecretKeyHereShouldBeAtLeast256BitsLongForHS256Algorithm
+  expiration: 86400000
+
+# Server Configuration
+server:
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        http-only: true
+        secure: false
+  port: 8080
+  
+# Logging Configuration
+logging:
+  level:
+    org.springframework.security: DEBUG 
