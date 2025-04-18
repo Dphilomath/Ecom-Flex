@@ -1,0 +1,56 @@
+spring:
+  profiles: prod
+  # Production Database Configuration (using environment variables)
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  
+  # Disable GraphiQL in production
+  graphql:
+    graphiql:
+      enabled: false
+
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+  # SSL Configuration
+  ssl:
+    enabled: true
+
+app:
+  base-url: https://ecom-flex.onrender.com
+
+# OpenAPI/Swagger Configuration
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+# Production level logging
+logging:
+  level:
+    root: INFO
+    com.dm.ecommerce: INFO
+    org.springframework: WARN
+
+# Security settings for production
+security:
+  require-ssl: true
+  headers:
+    content-security-policy: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+    x-content-type-options: nosniff
+    x-frame-options: DENY
+    x-xss-protection: 1; mode=block
+
+# JWT Configuration for production (longer expiration)
+jwt:
+  expiration: 604800000  # 7 days 
