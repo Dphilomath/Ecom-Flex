@@ -1,5 +1,7 @@
+# Configuration for production deployment profile
+# Activated when SPRING_PROFILES_ACTIVE=prod
+
 spring:
-  profiles: prod
   # Production Database Configuration (using environment variables)
   datasource:
     url: ${JDBC_DATABASE_URL}

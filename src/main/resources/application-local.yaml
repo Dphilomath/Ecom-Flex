@@ -1,5 +1,5 @@
-spring:
-  profiles: local
+# Configuration for local development profile
+# Activated when SPRING_PROFILES_ACTIVE=local (default if not specified)
 
 server:
   port: 8080
