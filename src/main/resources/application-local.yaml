@@ -13,8 +13,13 @@ app:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+    enabled: true
   api-docs:
     path: /v3/api-docs
+    enabled: true
+
+# GraphQL Configuration always enabled for local
+spring.graphql.graphiql.enabled: true
 
 # Logging Configuration for local development
 logging:

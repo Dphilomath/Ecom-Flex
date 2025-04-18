@@ -12,10 +12,10 @@ spring:
       ddl-auto: validate
     show-sql: false
   
-  # Disable GraphiQL in production
+  # GraphQL Configuration controlled via environment variable
   graphql:
     graphiql:
-      enabled: false
+      enabled: ${ENABLE_GRAPHIQL:true}
 
 server:
   port: ${PORT:8080}
@@ -28,12 +28,14 @@ server:
 app:
   base-url: https://ecom-flex.onrender.com
 
-# OpenAPI/Swagger Configuration
+# OpenAPI/Swagger Configuration with environment variable control
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+    enabled: ${ENABLE_SWAGGER:true}
   api-docs:
     path: /v3/api-docs
+    enabled: ${ENABLE_SWAGGER:true}
 
 # Production level logging
 logging:

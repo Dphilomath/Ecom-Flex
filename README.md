@@ -124,6 +124,37 @@ app.jwt.expiration=86400000  # 24 hours
 app.auth.mode=JWT
 ```
 
+### Environment Variables
+
+The following environment variables can be used to control application behavior in production:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `ENABLE_SWAGGER` | Enable/disable Swagger UI and OpenAPI docs in production | `true` |
+| `ENABLE_GRAPHIQL` | Enable/disable GraphiQL playground in production | `true` |
+| `PORT` | Server port (for cloud deployments) | `8080` |
+| `JDBC_DATABASE_URL` | Database connection URL | - |
+| `JDBC_DATABASE_USERNAME` | Database username | - |
+| `JDBC_DATABASE_PASSWORD` | Database password | - |
+| `SPRING_PROFILES_ACTIVE` | Active Spring profile (`local` or `prod`) | - |
+
+### Profile-Specific Configuration
+
+The application includes profile-specific configurations:
+
+- `application-local.yaml`: Used for local development (Swagger UI and GraphiQL always enabled)
+- `application-prod.yaml`: Used for production deployment (Swagger UI and GraphiQL controlled via environment variables)
+
+To activate a profile, set the `SPRING_PROFILES_ACTIVE` environment variable:
+
+```
+# For local development
+export SPRING_PROFILES_ACTIVE=local
+
+# For production
+export SPRING_PROFILES_ACTIVE=prod
+```
+
 ## Deployment
 
 ### Local Development
