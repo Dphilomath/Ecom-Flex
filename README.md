@@ -160,24 +160,47 @@ The application includes profile-specific configurations:
 - `application-prod.yaml`: Used for production deployment (Swagger UI and GraphiQL controlled via environment variables)
 - `application-docker.yml`: Used for Docker deployments
 
-To activate a profile, set the `SPRING_PROFILES_ACTIVE` environment variable:
+#### Activating Profiles
 
-```
-# For local development
-export SPRING_PROFILES_ACTIVE=local
+There are several ways to activate a specific profile:
 
-# For production
-export SPRING_PROFILES_ACTIVE=prod
-```
+1. **Using environment variables**:
+   ```
+   export SPRING_PROFILES_ACTIVE=local
+   mvn spring-boot:run
+   ```
+
+2. **Using JVM system properties**:
+   ```
+   mvn spring-boot:run -Dspring.profiles.active=local
+   ```
+
+3. **In Docker Compose**:
+   ```yaml
+   environment:
+     - SPRING_PROFILES_ACTIVE=docker
+   ```
+
+4. **In application.yml** (default profile that will be used if none is specified):
+   ```yaml
+   spring:
+     profiles:
+       active: local
+   ```
 
 ## Deployment
 
 ### Local Development
 
-For local development, you can use the H2 in-memory database:
+For local development with the H2 in-memory database:
 
 ```
+# Option 1: Using system property
 mvn spring-boot:run -Dspring.profiles.active=local
+
+# Option 2: Using environment variable
+export SPRING_PROFILES_ACTIVE=local
+mvn spring-boot:run
 ```
 
 ### Docker Deployment

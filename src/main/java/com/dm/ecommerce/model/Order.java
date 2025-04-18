@@ -1,5 +1,7 @@
 package com.dm.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +25,7 @@ public class Order {
     
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference
     private User user;
     
     @Column(nullable = false)
@@ -35,6 +38,7 @@ public class Order {
     private BigDecimal totalAmount;
     
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<OrderItem> items = new ArrayList<>();
     
     @ManyToOne
@@ -42,6 +46,7 @@ public class Order {
     private Address shippingAddress;
     
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private PaymentInfo paymentInfo;
     
     public void addOrderItem(OrderItem item) {

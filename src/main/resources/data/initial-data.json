@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "name": "Electronics",
+      "description": "Electronic devices and gadgets"
+    },
+    {
+      "name": "Clothing",
+      "description": "Apparel and fashion items"
+    },
+    {
+      "name": "Home & Kitchen",
+      "description": "Home appliances and kitchen essentials"
+    },
+    {
+      "name": "Books",
+      "description": "Books across various genres"
+    }
+  ],
+  "products": [
+    {
+      "name": "Smartphone Pro X",
+      "description": "Latest smartphone with advanced features",
+      "categoryName": "Electronics",
+      "price": 999.99,
+      "stockQuantity": 50
+    },
+    {
+      "name": "Laptop Ultra",
+      "description": "High-performance laptop for professionals",
+      "categoryName": "Electronics",
+      "price": 1299.99,
+      "stockQuantity": 30
+    },
+    {
+      "name": "Casual T-Shirt",
+      "description": "Comfortable cotton t-shirt for daily wear",
+      "categoryName": "Clothing",
+      "price": 19.99,
+      "stockQuantity": 100
+    },
+    {
+      "name": "Designer Jeans",
+      "description": "Premium quality denim jeans",
+      "categoryName": "Clothing",
+      "price": 79.99,
+      "stockQuantity": 75
+    },
+    {
+      "name": "Coffee Maker",
+      "description": "Automatic coffee maker with timer",
+      "categoryName": "Home & Kitchen",
+      "price": 89.99,
+      "stockQuantity": 40
+    },
+    {
+      "name": "Blender Set",
+      "description": "Multi-purpose blender with attachments",
+      "categoryName": "Home & Kitchen",
+      "price": 49.99,
+      "stockQuantity": 60
+    },
+    {
+      "name": "The Art of Coding",
+      "description": "Comprehensive guide to programming",
+      "categoryName": "Books",
+      "price": 34.99,
+      "stockQuantity": 80
+    },
+    {
+      "name": "Business Strategy",
+      "description": "Book on modern business strategies",
+      "categoryName": "Books",
+      "price": 29.99,
+      "stockQuantity": 65
+    }
+  ]
+} 
