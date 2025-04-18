@@ -100,6 +100,40 @@ type AuthMode {
     currentMode: String!
 }
 
+# Product related complex types
+type ProductWithDetails {
+    product: Product!
+    category: Category
+    reviews: [Review]
+    averageRating: Float
+    inStock: Boolean!
+}
+
+type ProductSummary {
+    id: ID!
+    name: String!
+    price: Float!
+    categoryName: String
+    averageRating: Float
+}
+
+type ProductsByCategory {
+    category: Category!
+    products: [Product]!
+    totalCount: Int!
+}
+
+type ReviewSummary {
+    totalReviews: Int!
+    averageRating: Float!
+    ratingDistribution: [RatingCount]!
+}
+
+type RatingCount {
+    rating: Int!
+    count: Int!
+}
+
 input ProductInput {
     name: String!
     description: String
@@ -151,12 +185,35 @@ input ReviewInput {
     comment: String
 }
 
+input ProductFilterInput {
+    minPrice: Float
+    maxPrice: Float
+    categoryIds: [ID]
+    minRating: Int
+    inStock: Boolean
+}
+
+input ProductSortInput {
+    field: String! # "price", "name", "rating"
+    direction: String! # "ASC", "DESC"
+}
+
 type Query {
     # Product queries
     getProductById(id: ID!): Product
     getAllProducts: [Product]
-    getProductsByCategory(categoryId: ID!): [Category]
+    getProductsByCategory(categoryId: ID!): [Product]
     searchProducts(keyword: String!): [Product]
+    
+    # Complex product queries
+    getProductWithDetails(id: ID!): ProductWithDetails
+    getTopRatedProducts(limit: Int): [Product]
+    getProductsOnSale: [Product]
+    getProductsByCategoryWithDetails(categoryId: ID!): ProductsByCategory
+    getProductReviewSummary(productId: ID!): ReviewSummary
+    getRelatedProducts(productId: ID!, limit: Int): [Product]
+    getFilteredProducts(filter: ProductFilterInput, sort: ProductSortInput, page: Int, size: Int): [Product]
+    getProductSummaries(ids: [ID]!): [ProductSummary]
     
     # Category queries
     getCategoryById(id: ID!): Category
