@@ -17,7 +17,7 @@
             background-color: #4CAF50;
             color: white;
             padding: 20px;
-      <!-- Updated on 2025-03-05 - Commit activity -->            text-align: center;
+            text-align: center;
             border-radius: 5px;
             margin-bottom: 20px;
         }
@@ -37,20 +37,20 @@
         }
         li {
             margin-bottom: 10px;
-      <!-- Updated on 2025-02-09 - Commit activity -->        }
+        }
         a {
             color: #4CAF50;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
-      <!-- Updated on 2025-01-28 - Commit activity -->        }
+        }
         .endpoint {
             background-color: #f5f5f5;
             padding: 8px;
             border-radius: 4px;
             font-family: monospace;
-      <!-- Updated on 2025-01-19 - Commit activity -->            margin: 5px 0;
+            margin: 5px 0;
         }
         form {
             margin-top: 15px;
@@ -85,8 +85,8 @@
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
-      <!-- Updated on 2025-03-26 - Commit activity -->            background-color: #f1f1f1;
-      <!-- Updated on 2025-02-14 - Commit activity -->            border-radius: 4px 4px 0 0;
+            background-color: #f1f1f1;
+            border-radius: 4px 4px 0 0;
         }
         .tab button {
             background-color: inherit;
@@ -103,18 +103,18 @@
         }
         .tab button.active {
             background-color: #4CAF50;
-      <!-- Updated on 2025-04-05 - Commit activity -->            color: white;
+            color: white;
         }
         .tabcontent {
             display: none;
             padding: 15px;
-      <!-- Updated on 2025-01-10 - Commit activity -->            border: 1px solid #ccc;
+            border: 1px solid #ccc;
             border-top: none;
             border-radius: 0 0 4px 4px;
         }
         .auth-response {
             margin-top: 15px;
-      <!-- Updated on 2025-01-21 - Commit activity -->            padding: 10px;
+            padding: 10px;
             border-radius: 4px;
             display: none;
         }
@@ -127,7 +127,7 @@
             background-color: #f2dede;
             border: 1px solid #ebccd1;
             color: #a94442;
-      <!-- Updated on 2025-01-10 - Commit activity -->        }
+        }
         #logoutBtn {
             display: none;
         }
@@ -135,11 +135,11 @@
             display: none;
             margin-top: 15px;
         }
-      <!-- Updated on 2025-02-06 - Commit activity -->    </style>
+    </style>
 </head>
 <body>
     <header>
-      <!-- Updated on 2025-02-22 - Commit activity -->        <h1>E-Commerce API</h1>
+        <h1>E-Commerce API</h1>
         <p>Spring Boot Backend with REST and GraphQL Support</p>
     </header>
 
@@ -180,8 +180,8 @@
                         <input type="password" id="regPassword" name="password" required>
                     </div>
                     <button type="submit">Register</button>
-      <!-- Updated on 2025-03-09 - Commit activity -->                </form>
-      <!-- Updated on 2025-02-27 - Commit activity -->            </div>
+                </form>
+            </div>
         </div>
 
         <div id="userInfo">
@@ -242,7 +242,7 @@
         <div class="endpoint">GET /api/admin/dashboard - Admin dashboard</div>
         <div class="endpoint">GET /api/admin/users - List all users</div>
         <div id="adminDashboardContainer" style="display: none;">
-      <!-- Updated on 2025-01-25 - Commit activity -->            <h3>Admin Dashboard</h3>
+            <h3>Admin Dashboard</h3>
             <pre id="adminDashboardData"></pre>
         </div>
     </div>
@@ -250,7 +250,7 @@
     <script>
         // Handle tab switching
         function openAuthTab(evt, tabName) {
-      <!-- Updated on 2025-02-26 - Commit activity -->            var i, tabcontent, tablinks;
+            var i, tabcontent, tablinks;
             
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -314,7 +314,7 @@
                     // If user is admin, load admin dashboard
                     if (currentUser.roles && currentUser.roles.includes('ADMIN')) {
                         loadAdminDashboard();
-      <!-- Updated on 2025-02-27 - Commit activity -->                    }
+                    }
                 } else {
                     showAuthResponse('Login failed: ' + (data.message || 'Unknown error'), false);
                 }
@@ -356,7 +356,7 @@
                     showAuthResponse('Registration successful!', true);
                 } else {
                     showAuthResponse('Registration failed: ' + (data.message || 'Unknown error'), false);
-      <!-- Updated on 2025-02-03 - Commit activity -->                }
+                }
             })
             .catch(error => {
                 showAuthResponse('Registration failed: ' + error.message, false);
@@ -381,7 +381,7 @@
                 // Reset UI
                 document.getElementById('authControls').style.display = 'block';
                 document.getElementById('userInfo').style.display = 'none';
-      <!-- Updated on 2025-02-04 - Commit activity -->                document.getElementById('logoutBtn').style.display = 'none';
+                document.getElementById('logoutBtn').style.display = 'none';
                 document.getElementById('adminDashboardContainer').style.display = 'none';
                 
                 showAuthResponse('Logged out successfully', true);
@@ -402,7 +402,7 @@
             setTimeout(() => {
                 authResponse.style.display = 'none';
             }, 5000);
-      <!-- Updated on 2025-03-09 - Commit activity -->        }
+        }
 
         // Helper function to show logged in user info
         function showLoggedInUser(user) {
@@ -435,8 +435,8 @@
                 document.getElementById('adminDashboardData').textContent = JSON.stringify(data, null, 2);
             })
             .catch(error => {
-      <!-- Updated on 2025-01-31 - Commit activity -->                console.error('Error loading admin dashboard:', error);
-      <!-- Updated on 2025-04-03 - Commit activity -->            });
+                console.error('Error loading admin dashboard:', error);
+            });
         }
     </script>
 </body>

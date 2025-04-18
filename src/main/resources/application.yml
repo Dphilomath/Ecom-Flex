@@ -56,31 +56,4 @@ server:
 # Logging Configuration
 logging:
   level:
-    org.springframework.security: DEBUG # Updated on 2025-01-09 - Commit activity
-# Updated on 2025-01-09 - Commit activity
-# Updated on 2025-01-12 - Commit activity
-# Updated on 2025-01-19 - Commit activity
-# Updated on 2025-02-02 - Commit activity
-# Updated on 2025-02-04 - Commit activity
-# Updated on 2025-02-04 - Commit activity
-# Updated on 2025-02-06 - Commit activity
-# Updated on 2025-02-07 - Commit activity
-# Updated on 2025-02-15 - Commit activity
-# Updated on 2025-02-19 - Commit activity
-# Updated on 2025-02-19 - Commit activity
-# Updated on 2025-02-25 - Commit activity
-# Updated on 2025-02-26 - Commit activity
-# Updated on 2025-03-03 - Commit activity
-# Updated on 2025-03-05 - Commit activity
-# Updated on 2025-03-06 - Commit activity
-# Updated on 2025-03-09 - Commit activity
-# Updated on 2025-03-09 - Commit activity
-# Updated on 2025-03-16 - Commit activity
-# Updated on 2025-03-18 - Commit activity
-# Updated on 2025-03-18 - Commit activity
-# Updated on 2025-03-26 - Commit activity
-# Updated on 2025-04-01 - Commit activity
-# Updated on 2025-04-02 - Commit activity
-# Updated on 2025-04-10 - Commit activity
-# Updated on 2025-04-10 - Commit activity
-# Updated on 2025-04-14 - Commit activity
+    org.springframework.security: DEBUG
