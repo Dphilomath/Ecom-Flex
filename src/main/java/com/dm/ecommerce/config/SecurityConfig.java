@@ -21,7 +21,7 @@ import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
       // Updated on 2025-04-10 - Commit activity
-/**
+      // Updated on 2025-04-18 - Commit activity/**
  * Security configuration for the application.
  */
 @Configuration
