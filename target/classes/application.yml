@@ -37,6 +37,11 @@ spring:
   # Security Configuration
   security:
     debug: true
+    
+  # Virtual Threads Configuration
+  threads:
+    virtual:
+      enabled: true
 
 # JWT Configuration
 jwt:
@@ -52,6 +57,11 @@ server:
         http-only: true
         secure: false
   port: 8080
+  # Enable virtual threads for Tomcat
+  tomcat:
+    threads:
+      max: 0  # Use 0 to let Tomcat decide based on CPU cores
+      virtual: true
   
 # Logging Configuration
 logging:
