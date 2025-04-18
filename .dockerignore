@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+
+# Build files
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Logs
+logs/
+*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Other
+README.md
+LICENSE
+*.md
+.mvn/
+mvnw
+mvnw.cmd
+
+# Scripts
+*.sh 

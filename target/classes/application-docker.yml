@@ -1,0 +1,34 @@
+spring:
+  # Database Configuration for Docker
+  datasource:
+    url: jdbc:h2:mem:ecommercedb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true  # Allow connections from other containers/hosts
+      path: /h2-console
+      
+  # Disable file-based caching that might interfere with containerized deployments
+  web:
+    resources:
+      cache:
+        period: 0
+        
+# Server Configuration for Docker
+server:
+  port: 8080
+  forward-headers-strategy: framework  # Helpful when behind a proxy
+
+# Additional configurations for containerized environment
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info  # Expose health endpoint for container health checks
+  endpoint:
+    health:
+      show-details: always 
